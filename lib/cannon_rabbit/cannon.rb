@@ -1,8 +1,12 @@
 module CannonRabbit
+  require_relative 'float'
   class Cannon
     include Math
 
     G = 9.81
+
+    attr_accessor :velocity, :g
+    attr_reader :x_impact
 
     def initialize(params = {})
       @alpha = 0.0;
@@ -12,7 +16,7 @@ module CannonRabbit
     end
 
     def fires(alpha)
-      x_impact = ( 2 * cos(alpha.get_radians)* sin(alpha.get_radians) * (v^2) ) / g
+      @x_impact = ( 2 * cos(alpha.get_radians)* sin(alpha.get_radians) * ( velocity ** 2) ) / g
     end
   end
 end

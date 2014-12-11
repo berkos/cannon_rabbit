@@ -7,4 +7,26 @@ game = CannonRabbit::Game.new(STDOUT)
 
 game.start
 
-binding.pry
+tries = 0;
+
+loop do
+  puts "choose your firing angle (in degrees)"
+  puts "bad luck, try again" unless tries == 0
+  alpha = gets.chomp
+  alpha = Float alpha rescue (alpha = nil)
+
+  if alpha && (alpha > 0 && alpha < 360)
+    tries = tries + 1
+    game.cannon.fires(alpha)
+
+    puts "position of the rabbit #{game.rabbit.current_position}"
+    puts "impact x of the cannon #{game.cannon.x_impact}"
+
+    break if game.did_we_get_the_rabbit?
+    game.rabbit.next_move
+  else
+    puts "make sure you give an number in degrees, that means between 0 to 360"
+  end
+end 
+
+game.success_message(tries)

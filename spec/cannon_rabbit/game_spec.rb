@@ -14,17 +14,17 @@ module CannonRabbit
         expect(output).to receive(:puts).with('So.. you can play until you get the rabbit. on each round you can choose a new firing angle (aplha) for the cannon to shoot. Rabbit moves so think wise!')
         game.start
       end
-      it "prompts for the first firing angle" do
-        expect(output).to receive(:puts).with('Go for it: pick your first firing angle')
-        game.start
+    end
+
+    describe "#did_we_get_the_rabbit?" do
+      it "doesnt get the rabbit" do 
+        game.cannon.fires(22.0)
+        expect(game.did_we_get_the_rabbit?).to be false
+      end
+      it "does get the rabbit" do 
+        game.cannon.fires(44.0)
+        expect(game.did_we_get_the_rabbit?).to be true
       end
     end
-    # describe "#guess" do
-    #   it "sends the mark to output" do
-    #     game.start('1234')
-    #     output.should_receive(:puts).with('++++')
-    #     game.guess('1234')
-    #   end
-    #end
   end
 end
