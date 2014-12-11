@@ -1,0 +1,1 @@
+require 'cannon_rabbit'
