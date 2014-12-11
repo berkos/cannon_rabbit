@@ -3,7 +3,7 @@ require_relative 'rabbit'
 
 module CannonRabbit
   class Game
-    KILLING_DISTANCE = 10.0 # we set the distance to get the rabbit
+    KILLING_DISTANCE = 15.0 # we set the distance to get the rabbit
     attr_accessor :cannon, :rabbit
 
     def initialize output
