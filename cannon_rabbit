@@ -17,14 +17,11 @@ loop do
     tries = tries + 1
     game.cannon.fires(alpha)
 
-    puts "position of the rabbit #{game.rabbit.current_position}"
-    puts "impact x of the cannon #{game.cannon.x_impact}"
-
     break if game.did_we_get_the_rabbit?
     game.rabbit.next_move
   else
     puts "make sure you give an number in degrees, that means between 0 to 360"
   end
-end 
+end
 
 game.success_message(tries)
