@@ -1,4 +1,6 @@
-Coding Problem:
+#### The Rabbit and the Cannon
+
+##Coding Problem:
  
 There is a player with a cannon at position 0 along an axis, and there is a rabbit at some unknown initial position x_0 on that axis.
 The player and the (computer-controlled) rabbit take turns.
@@ -15,11 +17,11 @@ You can pick values for the fixed parameters in this problem.
 
 
 
-##How to play the game
+##How to play the game:
 
 git clone the repo
 then you can run the game by just running ````./cannon_rabbit```` on the root directory of the project.
 
-The game is accompanied with some tests you can run them in root directory by 'rspec spec' make sure you have rspec 2.0 gem.
+The game is accompanied with some tests you can run them in root directory by ````rspec spec```` make sure you have rspec 2.0 gem.
 
 you can install it by ````gem install rspec```` on your current ruby

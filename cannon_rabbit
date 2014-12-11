@@ -1,12 +1,10 @@
 #!/usr/bin/env ruby
 $LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
 require 'cannon_rabbit'
-require 'pry'
 
 game = CannonRabbit::Game.new(STDOUT)
 
 game.start
-
 tries = 0;
 
 loop do

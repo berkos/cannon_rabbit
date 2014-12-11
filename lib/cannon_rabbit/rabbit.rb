@@ -13,6 +13,5 @@ module CannonRabbit
       probability = Random.rand(2)
       @current_position = probability == 0 ? @current_position - MOVING_DISTANCE : @current_position + MOVING_DISTANCE # rabbit goes left or right
     end
-
   end
 end

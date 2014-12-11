@@ -11,7 +11,7 @@ module CannonRabbit
       end
 
       it "explains the rules of the game" do
-        expect(output).to receive(:puts).with('So.. you can play until you get the rabbit. on each round you can choose a new firing angle (aplha) for the cannon to shoot. Rabbit moves so think wise!')
+        expect(output).to receive(:puts).with("So.. you can play until you get the rabbit. on each round you can choose a new firing angle (aplha) for the cannon to shoot. Rabbit moves so think wise!\n")
         game.start
       end
     end

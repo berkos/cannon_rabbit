@@ -1,8 +1,7 @@
+require_relative 'float'
+include Math
 module CannonRabbit
-  require_relative 'float'
   class Cannon
-    include Math
-
     G = 9.81
 
     attr_accessor :velocity, :g

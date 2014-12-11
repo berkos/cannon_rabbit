@@ -1,11 +1,9 @@
+require_relative 'cannon'
+require_relative 'rabbit'
+
 module CannonRabbit
-  require_relative 'cannon'
-  require_relative 'rabbit'
-
   class Game
-
     KILLING_DISTANCE = 10.0 # we set the distance to get the rabbit
-
     attr_accessor :cannon, :rabbit
 
     def initialize output
@@ -16,8 +14,7 @@ module CannonRabbit
 
     def start
       @output.puts 'Welcome to the Cannon Rabbit game! Make sure you get the rabbit. Someone is really hungry!'
-      @output.puts 'So.. you can play until you get the rabbit. on each round you can choose a new firing angle (aplha) for the cannon to shoot. Rabbit moves so think wise!'
-      @output.puts ""
+      @output.puts "So.. you can play until you get the rabbit. on each round you can choose a new firing angle (aplha) for the cannon to shoot. Rabbit moves so think wise!\n"
     end
 
     def did_we_get_the_rabbit?
